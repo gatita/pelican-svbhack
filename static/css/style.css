@@ -3,8 +3,9 @@ body {
   padding: 0;
   background-color: #ffffff;
   color: #4d4d4d;
-  font-family: 'PT Sans', sans-serif;
-  font-size: 18px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+  line-height: 24px;
 }
 a {
   color: #000000;
@@ -41,12 +42,13 @@ aside div#user_meta ul li {
   line-height: 3em;
 }
 aside div#user_meta ul li a {
-  padding: 5px 15px 5px 15px;
-  border: 3px solid #eeeeee;
-  border-radius: 15px;
-  -moz-border-radius: 15px;
-  -webkit-border-radius: 15px;
-  color: #999999;
+/*  padding: 5px 15px 5px 15px;*/
+  color: #222;
+  font-size: 11px;
+  font-weight: 600px;
+  letter-spacing: 0.2rem;
+  line-height: 0.5rem;
+  text-transform: uppercase;
 }
 main header {
   padding: 40px;
