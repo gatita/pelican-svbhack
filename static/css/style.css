@@ -1,14 +1,17 @@
+html, body {
+  height: 100%;
+}
 body {
   margin: 0;
   padding: 0;
   background-color: #ffffff;
   color: #4d4d4d;
-  font-family: 'Raleway', sans-serif;
+  font-family: sans-serif;
   font-size: 15px;
   line-height: 24px;
 }
 a {
-  color: #000000;
+  color: #333;
   text-decoration: none;
 }
 hr {
@@ -26,25 +29,27 @@ aside div#user_meta {
 }
 aside div#user_meta h2 {
   margin: 15px 0 5px 0;
+  line-height: 1.25;
+  letter-spacing: 0.1rem;
+  font-size: 15px;
 }
 aside div#user_meta p {
   margin: 0 0 15px 0;
   font-size: 14px;
 }
 aside div#user_meta ul {
-  margin: 40px 0 0 0;
+/*  margin: 40px 0 0 0;*/
   padding-left: 0;
   font-size: 16px;
   list-style-type: none;
 }
 aside div#user_meta ul li {
   display: inline;
-  line-height: 3em;
+  line-height: 2.5em;
 }
 aside div#user_meta ul li a {
-/*  padding: 5px 15px 5px 15px;*/
-  color: #222;
-  font-size: 11px;
+  color: #4d5957;
+  font-size: 12px;
   font-weight: 600px;
   letter-spacing: 0.2rem;
   line-height: 0.5rem;
@@ -137,7 +142,6 @@ main div#ending_message {
     position: fixed;
     top: 0;
     left: 0;
-    border-right: #eeeeee 1px solid;
   }
   aside h2 {
     margin: 10px 0 0 0;
@@ -163,4 +167,27 @@ main div#ending_message {
   main header {
     border-top: 0;
   }
+}
+
+.post_tag {
+  color: #f5a623;
+}
+
+.post_tag:hover, .read_link:hover {
+  color: #9dc8f1;
+}
+
+.read_link {
+  color: #5aa3e8;
+}
+
+h6 {
+  font-size: 0.875em;
+  line-height: 1.125em;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 1.875em;
+  line-height: 1.25em;
 }

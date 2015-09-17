@@ -8,7 +8,6 @@
   -->
   <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/style.css">
   <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/pygments.css">
-  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,14 +35,7 @@
 <body>
   <aside>
     <div id="user_meta">
-      <a href="{{ SITEURL }}">
-        {% if USER_LOGO_URL %}
-        <img src="{{ USER_LOGO_URL }}" alt="logo">
-        {% else %}
-        <img src="{{ SITEURL }}/theme/images/logo.png" alt="logo">
-        {% endif %}
-      </a>
-      <h2><a href="{{ SITEURL }}">{{ AUTHOR }}</a></h2>
+      <h2><a href="{{ SITEURL }}">{{ AUTHOR|upper }}</a></h2>
       <p>{{ TAGLINE }}</p>
       <ul>
         {% for title, link in MENUITEMS %}
@@ -63,30 +55,16 @@
   </aside>
 
   <main>
-<!--     <header>
-      <p>
-      <a href="{{ SITEURL }}">Index</a> &brvbar; <a href="{{ SITEURL }}/archives.html">Archives</a>
-      {% if FEED_ALL_ATOM %}
-      &brvbar; <a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}">Atom</a>
-      {% endif %}
-      {% if FEED_ALL_RSS %}
-      &brvbar; <a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}">RSS</a>
-      {% endif %}
-      {% block header %}
-      {% endblock header %}
-      </p>
-    </header> -->
-
     {% block content %}
     {% endblock %}
 
     {% block footer %}
     {% endblock %}
-
-    <div id="ending_message">
+  <div id="ending_message">
       <p>&copy; {{ AUTHOR }}. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Giulio Fidente on <a href="https://github.com/gfidente/pelican-svbhack" target="_blank">github</a>. {% if INTERNET_DEFENSE_LEAGUE %}Member of the <a href="http://internetdefenseleague.org">Internet Defense League</a>.{% endif %}</p>
-    </div>
+  </div>
   </main>
   {% include "modules/idl.html" %}
+  
 </body>
 </html>

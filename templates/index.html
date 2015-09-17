@@ -2,12 +2,18 @@
 {% block content %}
 {% for article in articles_page.object_list %}
 <article>
-  <div class="article_title">
-    <h3><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
-  </div>
-  <div class="article_text">
-    {{ article.summary }}
-  </div>
+    <div class="article_header">
+        <h6>{{ article.date|strftime('%B %Y') }} • <a class="post_tag" href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></h6>
+    </div>
+    <div class="article_title">
+        <h2>{{ article.title }}</h2>
+    </div>
+    <div class="article_text">
+        {{ article.summary }}
+    </div>
+    <div class="read_link">
+        <h6><a class="read_link" href="{{ SITEURL }}/{{ article.url }}">Read</a></h6>
+    </div>
 </article>
 {% if not loop.last %}
 <hr />
