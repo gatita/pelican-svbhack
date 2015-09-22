@@ -6,6 +6,7 @@
   <link rel="stylesheet/less" type="text/css" href="{{ SITEURL }}/theme/css/style.less">
   <script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/1.7.3/less.min.js" type="text/javascript"></script>
   -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/style.css">
   <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/pygments.css">
 
@@ -47,10 +48,15 @@
         {% for name, link in LINKS %}
         <li><a href="{{ link }}" target="_blank">{{ name }}</a></li>
         {% endfor %}
-        {% for name, link in SOCIAL %}
+<!--         {% for name, link in SOCIAL %}
         <li><a href="{{ link }}" target="_blank">{{ name }}</a></li>
-        {% endfor %}
+        {% endfor %} -->
       </ul>
+    </div>
+    <div id="social">
+      <a href="{{ GITHUB_ADDRESS }}"><i class="fa fa-github"></i></a>
+      <a href="{{ TWITTER_ADDRESS }}"><i class="fa fa-twitter"></i></a>
+      <a href="mailto:{{ EMAIL_ADDRESS }}"</a><i class="fa fa-envelope"></i></a>
     </div>
   </aside>
 
@@ -61,7 +67,7 @@
     {% block footer %}
     {% endblock %}
   <div id="ending_message">
-      <p>&copy; {{ AUTHOR }}. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Giulio Fidente on <a href="https://github.com/gfidente/pelican-svbhack" target="_blank">github</a>. {% if INTERNET_DEFENSE_LEAGUE %}Member of the <a href="http://internetdefenseleague.org">Internet Defense League</a>.{% endif %}</p>
+      <p>&copy; {{ AUTHOR }}. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Base theme by <a href="https://github.com/gfidente/pelican-svbhack" target="_blank">Giulio Fidente</a> with modifications. {% if INTERNET_DEFENSE_LEAGUE %}Member of the <a href="http://internetdefenseleague.org">Internet Defense League</a>.{% endif %}</p>
   </div>
   </main>
   {% include "modules/idl.html" %}
