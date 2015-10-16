@@ -32,11 +32,10 @@
 
   {% include "modules/analytics.html" %}
 </head>
-
 <body>
   <aside>
     <div id="user_meta">
-      <h2><a href="{{ SITEURL }}">{{ AUTHOR|upper }}</a></h2>
+      <h2><a href="{{ SITEURL }}">{{ AUTHOR }}</a></h2>
       <p>{{ TAGLINE }}</p>
       <ul>
         {% for title, link in MENUITEMS %}
@@ -48,18 +47,14 @@
         {% for name, link in LINKS %}
         <li><a href="{{ link }}" target="_blank">{{ name }}</a></li>
         {% endfor %}
-<!--         {% for name, link in SOCIAL %}
-        <li><a href="{{ link }}" target="_blank">{{ name }}</a></li>
-        {% endfor %} -->
+        <li id="social">
+          <a href="{{ GITHUB_ADDRESS }}"><i class="fa fa-github"></i></a>
+          <a href="{{ TWITTER_ADDRESS }}"><i class="fa fa-twitter"></i></a>
+          <a href="mailto:{{ EMAIL_ADDRESS }}"</a><i class="fa fa-envelope"></i></a>
+        </li>
       </ul>
     </div>
-    <div id="social">
-      <a href="{{ GITHUB_ADDRESS }}"><i class="fa fa-github"></i></a>
-      <a href="{{ TWITTER_ADDRESS }}"><i class="fa fa-twitter"></i></a>
-      <a href="mailto:{{ EMAIL_ADDRESS }}"</a><i class="fa fa-envelope"></i></a>
-    </div>
   </aside>
-
   <main>
     {% block content %}
     {% endblock %}
@@ -67,10 +62,8 @@
     {% block footer %}
     {% endblock %}
   <div id="ending_message">
-      <p>&copy; {{ AUTHOR }}. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Base theme by <a href="https://github.com/gfidente/pelican-svbhack" target="_blank">Giulio Fidente</a> with modifications. {% if INTERNET_DEFENSE_LEAGUE %}Member of the <a href="http://internetdefenseleague.org">Internet Defense League</a>.{% endif %}</p>
+      <p>&copy; {{ AUTHOR }}. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Base theme by <a href="https://github.com/gfidente/pelican-svbhack" target="_blank">Giulio Fidente</a> with <a href="https://github.com/gatita/pelican-svbhack" target="_blank">modifications</a>.</p>
   </div>
   </main>
-  {% include "modules/idl.html" %}
-  
 </body>
 </html>
