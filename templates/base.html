@@ -38,15 +38,11 @@
       <h2><a href="{{ SITEURL }}">{{ AUTHOR }}</a></h2>
       <p>{{ TAGLINE }}</p>
       <ul>
-        {% for title, link in MENUITEMS %}
-        <li><a href="{{ link }}">{{ title }}</a></li>
-        {% endfor %}
-        {% if DISPLAY_PAGES_ON_MENU %}{% for p in pages %}
+        
+        {% for p in pages %}
         <li><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
-        {% endfor %}{% endif %}
-        {% for name, link in LINKS %}
-        <li><a href="{{ link }}" target="_blank">{{ name }}</a></li>
         {% endfor %}
+        
         <li id="social">
           <a href="{{ GITHUB_ADDRESS }}"><i class="fa fa-github"></i></a>
           <a href="{{ TWITTER_ADDRESS }}"><i class="fa fa-twitter"></i></a>
