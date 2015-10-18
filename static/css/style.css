@@ -224,3 +224,61 @@ h2 {
 #ending_message {
   bottom: 0;
 }
+
+.project-title-link:hover {
+  color: #9dc8f1;
+}
+
+.project-title-link {
+  color: #4d4d4d;
+}
+
+/*.project-title-link h3 {
+  padding-top: 25px;
+}*/
+
+.page-title {
+  padding: 10px 40px;
+  margin-bottom: 0;
+  float: none;
+}
+
+.project {
+  padding: 10px 40px;
+  overflow: hidden;
+  max-width: 720px;
+}
+
+.project-image {
+  float: right;
+  width: 215px;
+  margin-top: 15px;
+  margin-left: 3%;
+  border: 1px solid rgba(158, 197, 226, .4);
+}
+
+.project-image-left {
+  float: left;
+  width: 215px;
+  margin: 15px 3% 0 0;
+  border: 1px solid rgba(158, 197, 226, .4);
+}
+
+.project-summary {
+  float: none;
+  margin-right: 2%;
+  text-align: justify;
+}
+
+.project-summary-caption {
+  color: #666;
+}
+
+#about {
+  padding: 10px 40px;
+  max-width: 640px;
+}
+
+#resume:hover {
+  color: #9dc8f1;
+}
